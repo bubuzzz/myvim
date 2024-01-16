@@ -209,7 +209,7 @@ let g:vim_http_tempbuffer = 1
 
 
 " Fuzzy finder
-nnoremap <leader>fbr <cmd>Telescope file_browser<cr>
+nnoremap <leader>, <cmd>Telescope file_browser<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
