@@ -19,7 +19,7 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'sindrets/diffview.nvim'
-
+Plug 'nvim-tree/nvim-web-devicons'
 
 " themes
 Plug 'morhetz/gruvbox'
@@ -132,7 +132,6 @@ hi CursorLine term=bold cterm=bold guibg=NONE ctermbg=NONe
 let python_highlight_all = 1
 "----------------------/ Python Syntax ----------------------"
 
-map <C-l> :SyntasticCheck<cr>
 
 set backupdir=$HOME/.vim_backup//
 set directory=$HOME/.vim_backup//
@@ -186,6 +185,9 @@ hi VertSplit guibg=bg guifg=bg
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
+
+" Diff View "
+map <C-d> :DiffviewOpen<cr>
 
 " Run python
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python' shellescape(@%, 1)<CR>
