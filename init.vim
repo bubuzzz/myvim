@@ -221,6 +221,6 @@ nnoremap <leader>fl <cmd>Telescope git_files<cr>
 " CHADTree for file explorer
 nnoremap , <cmd>CHADopen<cr>
 let g:chadtree_settings = {
-    \ 'theme.text_colour_set': 'nerdtree_syntax_light',
+    \ 'theme.text_colour_set': 'solarized_dark',
 \ }
 
