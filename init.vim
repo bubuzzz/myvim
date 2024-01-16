@@ -20,9 +20,6 @@ Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'sindrets/diffview.nvim'
 
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-file-browser.nvim'
 
 " themes
 Plug 'morhetz/gruvbox'
@@ -150,22 +147,16 @@ set backspace=indent,eol,start
 " set rtp+=/home/bubuzzz/.fzf/bin/fzf
 
 
-" This is the default extra key bindings
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit' }
-
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " Default fzf layout
 " - down / up / left / right
-let g:fzf_layout = { 'up': '~40%' }
+let g:fzf_layout = { 'up': '~60%' }
 
 " In Neovim, you can set up fzf window using a Vim command
 let g:fzf_layout = { 'window': 'enew' }
 let g:fzf_layout = { 'window': '-tabnew' }
-let g:fzf_layout = { 'window': '10split enew' }
+let g:fzf_layout = { 'window': '40split enew' }
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
@@ -207,16 +198,6 @@ autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python' shellescap
 " Vim Http
 let g:vim_http_split_vertically = 1
 let g:vim_http_tempbuffer = 1
-
-
-" Telescope Fuzzy finder
-nnoremap <leader>, <cmd>Telescope file_browser<cr>
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-nnoremap <leader>fl <cmd>Telescope git_files<cr>
-
 
 " CHADTree for file explorer
 nnoremap , <cmd>CHADopen<cr>
