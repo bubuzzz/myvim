@@ -68,10 +68,6 @@ ino [ []<left>
 ino { {}<left>
 ino {<CR> {<CR>}<ESC>O
 
-" for javascript configuration
-autocmd BufNewFile,BufRead *.js,*.es6,*.jsx set filetype=javascript.jsx
-autocmd Filetype javascript.jsx setlocal ts=2 sw=2 sts=0 expandtab
-
 
 " Python config
 let python_highlight_all = 1
