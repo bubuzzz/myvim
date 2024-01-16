@@ -3,7 +3,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 " let Vundle manage Vundle, required
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'haya14busa/incsearch.vim'
 Plug 'mhinz/vim-startify'
@@ -17,6 +16,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'nicwest/vim-http'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+Plug 'ryanoasis/vim-devicons'
+Plug 'sindrets/diffview.nvim'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -28,6 +30,7 @@ Plug 'tyrannicaltoucan/vim-deep-space'
 
 call plug#end()
 
+set encoding=UTF-8
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -81,8 +84,6 @@ map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
-" Git Guter
-let g:gitgutter_enabled = 1
 
 " Kill the capslock when leaving insert mode.
 autocmd InsertLeave * set iminsert=0
@@ -208,11 +209,18 @@ let g:vim_http_split_vertically = 1
 let g:vim_http_tempbuffer = 1
 
 
-" Fuzzy finder
+" Telescope Fuzzy finder
 nnoremap <leader>, <cmd>Telescope file_browser<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fl <cmd>Telescope git_files<cr>
+
+
+" CHADTree for file explorer
+nnoremap , <cmd>CHADopen<cr>
+let g:chadtree_settings = {
+    \ 'theme.text_colour_set': 'nerdtree_syntax_light',
+\ }
 
