@@ -1,7 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " let Vundle manage Vundle, required
-Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'haya14busa/incsearch.vim'
