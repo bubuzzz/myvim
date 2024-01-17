@@ -186,13 +186,8 @@ hi VertSplit guibg=bg guifg=bg
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
-
 " Diff View "
 map <C-d> :DiffviewOpen<cr>
-
-" Run python
-autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python' shellescape(@%, 1)<CR>
-autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python' shellescape(@%, 1)<CR>
 
 " Vim Http
 let g:vim_http_split_vertically = 1
