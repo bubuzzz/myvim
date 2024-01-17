@@ -207,6 +207,7 @@ let g:chadtree_settings = {
 
 " ALE configuration
 let g:ale_linters = {'python': ['pyright']}
+let g:ale_completion_enabled = 1
 
 nnoremap gd <cmd>ALEGoToDefinition<cr>
 nnoremap <s-f6> <cmd>ALERename<cr>
