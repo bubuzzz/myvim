@@ -20,6 +20,7 @@ Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'sindrets/diffview.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
+Plug 'dense-analysis/ale'
 
 " themes
 Plug 'morhetz/gruvbox'
@@ -203,3 +204,6 @@ let g:chadtree_settings = {
     \ 'theme.text_colour_set': 'solarized_dark',
 \ }
 
+
+" ALE configuration
+let g:ale_linters = {'python': ['pyright']}
