@@ -208,7 +208,11 @@ let g:chadtree_settings = {
 " ALE configuration
 let g:ale_linters = {'python': ['pyright']}
 let g:ale_completion_enabled = 1
+set completeopt=menu,menuone,preview,noselect,noinsert
 
 nnoremap gd <cmd>ALEGoToDefinition<cr>
 nnoremap <s-f6> <cmd>ALERename<cr>
 
+" Go to prev/next buffer
+nnoremap <s-h> <cmd>bp<cr>
+nnoremap <s-l> <cmd>bn<cr>
